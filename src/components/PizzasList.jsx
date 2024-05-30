@@ -1,14 +1,17 @@
 import React from "react";
+import pizzas from "../assets/db.json";
 import PizzaItem from "./PizzaItem";
 
-
-function PizzasList(title, price) {
+function PizzasList() {
   return (
+
+
     <div className="content__items">
-      <PizzaItem title="Мексиканская" price="550" />
-      <PizzaItem title="Чизбергер-пицца" price="250" />
+      {pizzas.map((obj) => (
+        <PizzaItem {...obj} key={obj.id}/>
+      ))}
     </div>
-  )
+  );
 }
 
 export default PizzasList;
