@@ -1,6 +1,6 @@
 import React from "react";
 
-function PizzaItem({ title, price, imageUrl, sizes, types }) {
+function Index({ title, price, imageUrl, sizes, types }) {
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
   const typeNames = ["тонкое", "традционное"];
@@ -56,4 +56,4 @@ function PizzaItem({ title, price, imageUrl, sizes, types }) {
   );
 }
 
-export default PizzaItem;
+export default Index;

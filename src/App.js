@@ -1,21 +1,22 @@
 import React from "react";
-import Header from "./components/Header";
-import Categories from "./components/Categories";
-import Sort from "./components/Sort";
-import PizzasList from "./components/PizzasList";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Card from "./pages/Cart";
+import NotFound from "./pages/NotFound";
+
+const App = () => {
   return (
     <div className="wrapper">
       <Header />
       <div className="content">
         <div className="container">
-          <div className="content__top">
-            <Categories />
-            <Sort />
-          </div>
-          <h2 className="content__title">Все пиццы</h2>
-          <PizzasList />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/cart" element={<Card />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
         </div>
       </div>
     </div>
