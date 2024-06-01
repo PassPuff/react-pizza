@@ -13,6 +13,7 @@ function PizzasList() {
         setItems(arr);
         setLoading(false);
       });
+    window.scrollTo(0, 0);
   }, []);
 
   return (

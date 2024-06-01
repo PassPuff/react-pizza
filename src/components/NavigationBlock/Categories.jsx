@@ -13,8 +13,7 @@ function Categories() {
   ];
 
   return (
-    <div className="categories">
-      <ul>
+      <ul className="categories">
         {categories.map((categories, index) => (
           <li
             onClick={() => setActiveIndex(index)}
@@ -25,7 +24,6 @@ function Categories() {
           </li>
         ))}
       </ul>
-    </div>
   );
 }
 

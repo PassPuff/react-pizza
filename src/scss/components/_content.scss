@@ -1,0 +1,15 @@
+.content {
+  margin-bottom: 70px;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+
+  &__title {
+    padding: 35px 0;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: min(3vw, 30px);
+  }
+}

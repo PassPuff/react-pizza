@@ -6,11 +6,6 @@
   font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
 }
 
-//html {
-//  -ms-text-size-adjust: 100%;
-//  -webkit-text-size-adjust: 100%;
-//}
-
 .visually-hidden:not(:focus):not(:active), input[type=checkbox].visually-hidden, input[type=radio].visually-hidden {
   position: absolute;
   width: 1px;
@@ -19,7 +14,6 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -28,8 +22,12 @@
 .container {
   max-width: 1340px;
   margin: 0 auto;
-  padding: 0 70px;
+  padding: 0 min(5vw, 70px);
   box-sizing: border-box;
+
+  @media (max-width: 1340px) {
+    margin: 0 20px;
+  }
 }
 
 
@@ -37,6 +35,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: $black;
+  background-color: $background;
+
 }
 
 a,
@@ -71,6 +71,6 @@ a {
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
+  user-select: none;
+
 }
