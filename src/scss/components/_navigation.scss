@@ -1,0 +1,13 @@
+.navigation {
+
+  background-color: #fff;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+}

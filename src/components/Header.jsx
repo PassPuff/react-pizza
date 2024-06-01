@@ -3,9 +3,9 @@ import logoSvg from "../assets/img/pizza-logo.svg";
 
 function Header() {
   return (
-    <div className="header">
-      <div className="container">
-        <Link to="/" className="header__logo" >
+    <header className="container  header">
+      <div className="header__wrapper">
+        <Link to="/" className="header__logo">
           <img width="38" src={logoSvg} alt="Pizza logo" />
           <div>
             <h1>React Pizza</h1>
@@ -49,7 +49,8 @@ function Header() {
           </Link>
         </div>
       </div>
-    </div>
+
+    </header>
   );
 }
 

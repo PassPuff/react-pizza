@@ -6,7 +6,7 @@ function Index({ title, price, imageUrl, sizes, types }) {
   const typeNames = ["тонкое", "традционное"];
 
   return (
-    <div className="pizza-block">
+    <li className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
@@ -52,7 +52,7 @@ function Index({ title, price, imageUrl, sizes, types }) {
           <i>0</i>
         </button>
       </div>
-    </div>
+    </li>
   );
 }
 

@@ -4,13 +4,34 @@
   list-style: none;
   outline: none;
   font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
+}
+
+//html {
+//  -ms-text-size-adjust: 100%;
+//  -webkit-text-size-adjust: 100%;
+//}
+
+.visually-hidden:not(:focus):not(:active), input[type=checkbox].visually-hidden, input[type=radio].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 70px;
   box-sizing: border-box;
 }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
 
 body {
   -moz-osx-font-smoothing: grayscale;

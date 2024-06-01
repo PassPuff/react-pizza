@@ -16,11 +16,14 @@ function PizzasList() {
   }, []);
 
   return (
-    <div className="content__items">
-      {isLoading
-        ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
-        : items.map((obj) => <Index key={obj.id} {...obj} />)}
-    </div>
+    <section className="content container">
+      <h2 className="content__title">Все пиццы</h2>
+      <ul className="content__items">
+        {isLoading
+          ? [...new Array(6)].map((_, index) => <Skeleton key={index}/>)
+          : items.map((obj) => <Index key={obj.id} {...obj} />)}
+      </ul>
+    </section>
   );
 }
 
