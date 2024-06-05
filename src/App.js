@@ -7,11 +7,13 @@ import Card from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
+  const [searchValue, setSearchValue] = React.useState("");
+
   return (
     <>
-      <Header />
+      <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home searchValue={searchValue}/>}></Route>
         <Route path="/cart" element={<Card />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
